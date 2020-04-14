@@ -19,8 +19,9 @@ class Adminlogin{
     }
 
     public function adminLogin($adminUser, $adminPass) {
-        $adminUser = $this->fm->validation($adminUser);     //here i with this format class object i access the method
-        $adminPass = $this->fm->validation($adminPass);     //here i with this format class object i access the method
+        // Access the method
+        $adminUser = $this->fm->validation($adminUser);     
+        $adminPass = $this->fm->validation($adminPass);    
 
         $adminUser =  mysqli_real_escape_string($this->db->link, $adminUser ); // our login filed adminUser 
         $adminPass =  mysqli_real_escape_string($this->db->link, $adminPass ); // our login filed adminPass 
@@ -39,8 +40,8 @@ class Adminlogin{
     			Session::set("adminName", $value['adminName']);
     			header("Location:dashboard.php");
     		}else {
-    			$loginmsg = "username or password not match ";
-    			return $loginmsg; // here we return this message we have to get this msg letter for display this text.
+    			$loginmsg = "Username or Password do not match ";
+    			return $loginmsg;
     		}
         }
     }

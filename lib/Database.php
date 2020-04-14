@@ -36,7 +36,7 @@ class Database {
     if($result->num_rows > 0){
     	return $result;
     	    } else {
-    	    	return false;// here i just return false 
+    	    	return false;
     	    }   
  
      }
@@ -49,7 +49,7 @@ class Database {
    	 return $insert_row;
    	exit();
    	   } else {
-   	   	return false; // here i just return false 
+   	   	return false;
    	   }
    }
  
@@ -60,7 +60,7 @@ class Database {
    	return $update_row;
    	exit();
    	   } else {
-   	   	return false;// here i just return false 
+   	   	return false;
    	   }
    }
  
@@ -72,7 +72,7 @@ class Database {
    return $delete_row;
    	exit();
       } else {
-   	  return false; // here i just return false 
+   	  return false;
   	   }
    }
   }
